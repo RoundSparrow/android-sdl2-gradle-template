@@ -31,7 +31,7 @@ model {
 
         defaultConfig {
             applicationId = 'org.libsdl.app'
-            minSdkVersion.apiLevel = 4
+            minSdkVersion.apiLevel = 9
             targetSdkVersion.apiLevel = 25
         }
         sources {
@@ -86,6 +86,12 @@ model {
         }
     }
 }
+
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.0.1'
+}
+
 
 tasks.whenTaskAdded { task ->
     if (task.name.contains('compile')) {
